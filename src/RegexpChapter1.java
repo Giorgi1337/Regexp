@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class RegexpChapter1 {
     public static void main(String[] args) {
         /*
@@ -41,5 +43,16 @@ public class RegexpChapter1 {
         System.out.println(f.matches("\\d{2,4}"));
 
        // https://regexlib.com/?AspxAutoDetectCookieSupport=1
+
+        String h = "Who.is.there?";
+
+        String[] words = h.split("\\.");
+        System.out.println(Arrays.toString(words));
+
+        String t = "New1231234text12313here";
+        String modified = t.replaceAll("\\d+","--");
+        String modifiedFirst = t.replaceFirst("\\d+","|");
+        System.out.println(modified);
+        System.out.println(modifiedFirst);
     }
 }
